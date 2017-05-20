@@ -65,7 +65,7 @@ module.exports = React.createClass({
   },
 
   removeEvents: function() {
-    this.editorEl.removeEventListener('keyup', this.eventWrapper);
+    this.editorEl.removeEventListener('input', this.eventWrapper);
     this.editorToolbarEl && this.editorToolbarEl.removeEventListener('click', this.eventWrapper);
   },
 
@@ -76,7 +76,7 @@ module.exports = React.createClass({
     this.editorEl = wrapperEl.getElementsByClassName('CodeMirror')[0];
     this.editorToolbarEl = wrapperEl.getElementsByClassName('editor-toolbar')[0];
 
-    this.editorEl.addEventListener('keyup', this.eventWrapper);
+    this.editorEl.addEventListener('input', this.eventWrapper);
     this.editorToolbarEl && this.editorToolbarEl.addEventListener('click', this.eventWrapper);
   },
 
