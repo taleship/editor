@@ -125,7 +125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  removeEvents: function removeEvents() {
-	    this.editorEl.removeEventListener('input', this.eventWrapper);
+	    this.editorEl.removeEventListener('keyup', this.eventWrapper);
 	    this.editorToolbarEl && this.editorToolbarEl.removeEventListener('click', this.eventWrapper);
 	  },
 	
@@ -136,7 +136,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.editorEl = wrapperEl.getElementsByClassName('CodeMirror')[0];
 	    this.editorToolbarEl = wrapperEl.getElementsByClassName('editor-toolbar')[0];
 	
-	    this.editorEl.addEventListener('input', this.eventWrapper);
+	    this.editorEl.addEventListener('keyup', this.eventWrapper);
 	    this.editorToolbarEl && this.editorToolbarEl.addEventListener('click', this.eventWrapper);
 	  },
 	
