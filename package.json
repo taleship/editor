@@ -6,6 +6,8 @@
   "author": "Ben Lodge",
   "license": "MIT",
   "dependencies": {
+    "preact": "^8.2.1",
+    "preact-compat": "^3.16.0",
     "react": "^0.14.2",
     "simplemde": "^1.11.2"
   },
@@ -30,6 +32,7 @@
     "dev": "webpack --progress --colors --watch",
     "build": "webpack --progress --colors",
     "build-prod": "NODE_ENV=production webpack --progress --colors && gulp",
-    "build-all": "npm run build && npm run build-prod"
+    "build-all": "npm run build && npm run build-prod",
+    "start": "gulp --cwd demo"
   }
 }

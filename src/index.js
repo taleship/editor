@@ -47,7 +47,7 @@ module.exports = React.createClass({
   },
 
   createEditor: function() {
-    const SimpleMDE = require('simplemde');
+    const SimpleMDE = require('./vendor/simplemde.min.js');
     const initialOptions = {
       element: document.getElementById(this.id),
       initialValue: this.props.value
