@@ -94,10 +94,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
 	    if (!this.state.keyChange && nextProps.value !== this.simplemde.value()) {
-	      console.log("Value changed");
+	      // Prevent a bad bug.
+	      console.log("SimpleMDE: Value changed");
 	      this.simplemde.value(nextProps.value);
 	      this.simplemde.codemirror.focus();
-	      // Set the cursor at the end of existing content
 	      this.simplemde.codemirror.setCursor(this.simplemde.codemirror.lineCount(), 0);
 	    }
 	
