@@ -34,7 +34,11 @@ module.exports = React.createClass({
 
   componentWillReceiveProps: function(nextProps) {
     if (!this.state.keyChange && (nextProps.value !== this.simplemde.value())) {
-      this.simplemde.value(nextProps.value)
+      console.log("Value changed");
+      this.simplemde.value(nextProps.value);
+      this.simplemde.codemirror.focus();
+      // Set the cursor at the end of existing content
+      this.simplemde.codemirror.setCursor(this.simplemde.codemirror.lineCount(), 0);
     }
 
     this.setState({
